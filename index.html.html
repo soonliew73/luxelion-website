@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuxeLion 狮悦行 · Luxury Chauffeur Singapore</title>
+  <meta name="description" content="LuxeLion 狮悦行 · 新加坡高端私人司导 · 7座埃尔法 Alphard · 机场接送 · 小时包车 · 商务接待" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0c0c0f;--card:#15161a;--muted:#9aa1ad;--gold:#F2A900;--gold2:#F7C04A;--line:#24262c;--white:#f6f7f9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Poppins,system-ui,Arial;background:radial-gradient(1200px 600px at 70% -10%,#1d1f25 10%,transparent 60%) no-repeat var(--bg);color:var(--white)}
+    a{color:inherit}
+
+    /* Header */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(12,12,15,.65);border-bottom:1px solid var(--line)}
+    .wrap{max-width:1140px;margin:auto;padding:14px 20px;display:flex;align-items:center;gap:18px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.5px}
+    .logo .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;color:#111;font-weight:900}
+    .nav-links{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+    .nav-links a:hover{color:var(--white)}
+    .cta{margin-left:4px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border:none;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer}
+    .lang{border:1px solid var(--line);background:#111318;color:var(--white);border-radius:10px;padding:8px 12px;cursor:pointer}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero .inner{max-width:1140px;margin:auto;padding:88px 20px 72px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+    .h-title{font-size:42px;line-height:1.15;margin:0 0 12px}
+    .h-sub{color:var(--muted);margin:0 0 24px}
+    .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:700;border:1px solid var(--line);background:#181a1f;color:var(--white);text-decoration:none}
+    .btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;border-color:#000}
+    .badge{display:inline-block;margin-top:10px;color:#111;background:#f7d57a;border-radius:999px;padding:6px 12px;font-size:12px;font-weight:700}
+    .hero-card{background:linear-gradient(180deg,#16181d,#121317);border:1px solid var(--line);border-radius:16px;padding:18px}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin:8px 0 0}
+    .list div{display:flex;align-items:center;gap:8px;color:var(--muted)}
+
+    /* Sections */
+    section{max-width:1140px;margin:0 auto;padding:56px 20px;border-top:1px solid var(--line)}
+    h2{margin:0 0 18px;font-size:28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,#17191e,#13151a);border:1px solid var(--line);border-radius:14px;padding:18px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+
+    /* Testimonials */
+    .testimonial{border-left:3px solid var(--gold);padding-left:14px;color:var(--muted)}
+
+    /* FAQ */
+    details{background:#14161a;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+    details+details{margin-top:10px}
+    details summary{cursor:pointer;font-weight:700}
+
+    /* Pricing */
+    .price-table{width:100%;border-collapse:collapse;font-size:15px}
+    .price-table th,.price-table td{border:1px solid var(--line);padding:12px 10px;text-align:center}
+    .price-table th{background:#1a1c21}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    .muted{color:var(--muted)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);padding:28px 20px;color:var(--muted);text-align:center}
+
+    /* Lang toggle */
+    .en{display:none}
+    body.lang-en .zh{display:none}
+    body.lang-en .en{display:block}
+
+    /* Small */
+    @media (max-width:900px){.hero .inner{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
+    [data-fade]{opacity:0;transform:translateY(6px);animation:fade .8s ease forwards}
+    [data-fade="2"]{animation-delay:.15s}
+    [data-fade="3"]{animation-delay:.3s}
+    @keyframes fade{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <div class="nav">
+    <div class="wrap">
+      <div class="logo"><div class="mark">🦁</div> LuxeLion 狮悦行</div>
+      <div class="nav-links">
+        <a href="#about">关于</a>
+        <a href="#services">服务</a>
+        <a href="#tours">体验</a>
+        <a href="#gallery">图库</a>
+        <a href="#reviews">口碑</a>
+        <a href="#faq">FAQ</a>
+        <a href="#pricing">价格</a>
+        <a href="#contact">联系</a>
+        <button class="lang" onclick="toggleLang()">EN / 中</button>
+        <a class="cta" href="https://wa.me/6597938933" target="_blank">WhatsApp 预订</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="inner">
+      <div class="zh">
+        <h1 class="h-title" data-fade>专属定制 · 尊享奢华旅程</h1>
+        <p class="h-sub" data-fade="2">7座埃尔法 Alphard · 有证司导 · 全程陪同 · 新加坡私人包车</p>
+      </div>
+      <div class="en">
+        <h1 class="h-title" data-fade>Tailor‑Made · Private Luxury Journeys</h1>
+        <p class="h-sub" data-fade="2">7‑Seater Alphard · Licensed Chauffeur‑Guide · Full Escort · Singapore</p>
+      </div>
+      <div class="hero-cta" data-fade="3">
+        <a class="btn primary" href="#contact">立即咨询 / Book Now</a>
+        <a class="btn" href="#pricing">查看价格 / Pricing</a>
+      </div>
+      <div class="hero-card" data-fade="2">
+        <h3 style="margin:0 0 10px">服务亮点 / Highlights</h3>
+        <div class="list">
+          <div>🚖 机场接送 Airport Transfer</div>
+          <div>🕒 小时包车 Hourly Charter</div>
+          <div>🦁 7座埃尔法 Alphard</div>
+          <div>🧭 有证司导 Licensed Guide</div>
+        </div>
+        <span class="badge">✓ 中文客服 · 家庭 / 情侣 / 商务 | Family · Couple · Business</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 / About -->
+  <section id="about">
+    <h2>关于我们 / About Us</h2>
+    <p class="muted zh">LuxeLion 狮悦行是新加坡本地高端私人司导品牌，为亲子、情侣、姐妹与商务旅客提供定制行程与豪华出行体验。</p>
+    <p class="muted en">LuxeLion is a Singapore‑based premium chauffeur‑guide service, creating bespoke itineraries and luxury rides for families, couples, and business travelers.</p>
+  </section>
+
+  <!-- 服务 / Services -->
+  <section id="services">
+    <h2>我们的服务 / Services</h2>
+    <div class="grid">
+      <div class="card">🚖 机场接送 · Airport Transfer</div>
+      <div class="card">🕒 小时包车 · Hourly Charter (3/4/8h)</div>
+      <div class="card">🦁 7座埃尔法 · Alphard 7‑Seater</div>
+      <div class="card">👔 高端商务接待 · Corporate</div>
+      <div class="card">🧭 有证司导 · Licensed Guide</div>
+      <div class="card">🚌 团体巴士 · 13/23/45‑Seater</div>
+    </div>
+  </section>
+
+  <!-- 奢华体验 / Tours -->
+  <section id="tours">
+    <h2>奢华体验 / Signature Tours</h2>
+    <div class="grid">
+      <div class="card">滨海湾金沙 · Marina Bay Sands</div>
+      <div class="card">鱼尾狮公园 · Merlion Park</div>
+      <div class="card">滨海湾花园 · Gardens by the Bay</div>
+      <div class="card">圣淘沙 · Sentosa</div>
+    </div>
+  </section>
+
+  <!-- 图库 / Gallery -->
+  <section id="gallery">
+    <h2>图库 / Gallery</h2>
+    <p class="muted">* 将下方图片链接替换为你的车辆、接机举牌、客户合影等素材</p>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" alt="Alphard" />
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Marina Bay" />
+      <img src="https://images.unsplash.com/photo-1478316148573-35e68a165620" alt="VIP Transfer" />
+      <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" alt="City Night" />
+      <img src="https://images.unsplash.com/photo-1520975922203-bc4e58ca54b2" alt="Guide" />
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Family Tour" />
+    </div>
+  </section>
+
+  <!-- 口碑 / Testimonials -->
+  <section id="reviews">
+    <h2>客户口碑 / Testimonials</h2>
+    <div class="grid">
+      <div class="card testimonial">“车很新很干净，司导专业又贴心，亲子出行超级省心！”<br><small>— 来自上海的王女士</small></div>
+      <div class="card testimonial">“Perfect VIP transfer for our executives. On time and discreet.”<br><small>— James, Singapore</small></div>
+      <div class="card testimonial">“会中文的有证导游全程陪同，旅途安排很细致，值得推荐！”<br><small>— 陈先生 · 广州</small></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2>常见问题 / FAQ</h2>
+    <details>
+      <summary>价格是否包含过路费、油费？ / Are tolls and fuel included?</summary>
+      <p class="muted">包含基本车资、油费与过路费；不含景点门票与餐饮。</p>
+    </details>
+    <details>
+      <summary>是否提供儿童安全座椅？ / Do you provide child seats?</summary>
+      <p class="muted">可按需安排，请在预订时告知儿童人数与年龄。</p>
+    </details>
+    <details>
+      <summary>如何支付？ / How do I pay?</summary>
+      <p class="muted">支持现金、PayNow、银行卡；商务客户可开票结算。</p>
+    </details>
+  </section>
+
+  <!-- 价格 / Pricing -->
+  <section id="pricing">
+    <h2>价格表（SGD） / Pricing</h2>
+    <div class="card">
+      <table class="price-table">
+        <thead>
+          <tr><th>车型</th><th>接机</th><th>送机</th><th>包车/小时</th><th>点对点(市区/外)</th><th>夜费</th><th>司兼导/小时</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>5座轿车</td><td>55</td><td>50</td><td>45</td><td>45 / 50</td><td>15</td><td>60</td></tr>
+          <tr><td>舒适7座</td><td>60</td><td>55</td><td>55</td><td>50 / 55</td><td>15</td><td>65</td></tr>
+          <tr><td>7座埃尔法</td><td>75</td><td>65</td><td>60</td><td>60 / 65</td><td>15</td><td>70</td></tr>
+          <tr><td>13座</td><td>80</td><td>75</td><td>55</td><td>70 / 75</td><td>-</td><td>-</td></tr>
+          <tr><td>23座</td><td>100</td><td>100</td><td>65</td><td>90 / 100</td><td>25</td><td>-</td></tr>
+          <tr><td>45座</td><td>130</td><td>130</td><td>70</td><td>120 / 130</td><td>25</td><td>-</td></tr>
+        </tbody>
+      </table>
+      <p class="muted" style="margin:10px 0 0">* 举牌接机 $20 · 行李费 $20 · 价格含车油路桥，不含景点门票与餐食。</p>
+    </div>
+  </section>
+
+  <!-- 联系 / Contact & Booking -->
+  <section id="contact">
+    <h2>联系我们 / Book Now</h2>
+    <div class="contact">
+      <div class="card">
+        <p>电话 / WhatsApp：<a href="https://wa.me/6597938933" target="_blank" rel="noopener">+65 97938933</a></p>
+        <p>Email：<a href="mailto:luxelionservices@gmail.com">luxelionservices@gmail.com</a></p>
+        <p>WeChat：soonliew</p>
+        <div style="display:flex;gap:10px;margin-top:10px">
+          <a class="btn primary" href="https://wa.me/6597938933" target="_blank">WhatsApp</a>
+          <a class="btn" href="mailto:luxelionservices@gmail.com?subject=LuxeLion%20Booking&body=您好，我想预订用车/司导服务...">Email</a>
+        </div>
+      </div>
+      <div class="card">
+        <form id="bookForm" onsubmit="return sendBooking();">
+          <label>姓名 Name<br><input id="fName" required style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1014;color:#fff"/></label><br><br>
+          <label>日期 Date<br><input id="fDate" type="date" required style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1014;color:#fff"/></label><br><br>
+          <label>人数 Pax<br><input id="fPax" type="number" min="1" value="2" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1014;color:#fff"/></label><br><br>
+          <label>车型 Vehicle<br>
+            <select id="fCar" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1014;color:#fff">
+              <option>7座埃尔法 Alphard</option>
+              <option>5座轿车 Sedan</option>
+              <option>舒适7座 MPV</option>
+              <option>13座 Minibus</option>
+            </select>
+          </label><br><br>
+          <label>需求说明 Notes<br><textarea id="fNote" rows="4" style="width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1014;color:#fff" placeholder="接机/包车小时/行程…"></textarea></label><br><br>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="cta" type="submit">提交到 WhatsApp</button>
+            <button class="btn" type="button" onclick="sendEmail()">发送到 Email</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 LuxeLion 狮悦行 · All rights reserved.</footer>
+
+  <script>
+    function toggleLang(){document.body.classList.toggle('lang-en');}
+    function sendBooking(){
+      const name = document.getElementById('fName').value.trim();
+      const date = document.getElementById('fDate').value;
+      const pax  = document.getElementById('fPax').value;
+      const car  = document.getElementById('fCar').value;
+      const note = document.getElementById('fNote').value.trim();
+      const msg = `预约咨询
+姓名:${name}
+日期:${date}
+人数:${pax}
+车型:${car}
+需求:${note}`;
+      const url = 'https://wa.me/6597938933?text=' + encodeURIComponent(msg);
+      window.open(url,'_blank');
+      return false;
+    }
+    function sendEmail(){
+      const name = document.getElementById('fName').value.trim();
+      const date = document.getElementById('fDate').value;
+      const pax  = document.getElementById('fPax').value;
+      const car  = document.getElementById('fCar').value;
+      const note = document.getElementById('fNote').value.trim();
+      const subject='LuxeLion 预约咨询';
+      const body = `姓名: ${name}%0D%0A日期: ${date}%0D%0A人数: ${pax}%0D%0A车型: ${car}%0D%0A需求: ${note}`;
+      window.location.href = `mailto:luxelionservices@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
